@@ -1,0 +1,61 @@
+baseURL = "https://dcaolab.com/"
+languageCode = "en-us"
+title = "Cao Lab"
+theme = "researcher"
+disableKinds = ["taxonomy", "term"]
+enableEmoji = true
+
+[params]
+  author = "Dennis Cao"
+  description = "Cao Lab - Organic Chemistry"
+  favicon = "favicon.ico"
+  [params.footer]
+    text = "Cao Lab"
+    url = "https://dcaolab.com"
+  [params.style]
+    fontFamily = "Inconsolata"
+    fontSize = "14pt"
+    pageWidth = "800px"
+    avatarSize = "120px"
+    colorBlack = "#222222"
+    colorRed = "#b5121b"
+  [[params.socialIcons]]
+    icon = "fas fa-envelope"
+    title = "E-mail"
+    url = "mailto:CHANGEME@university.edu"
+  [[params.socialIcons]]
+    icon = "ai ai-google-scholar"
+    title = "Google Scholar"
+    url = "https://scholar.google.com/citations?user=CHANGEME"
+
+[permalinks]
+  "/" = "/:contentbasename"
+
+[menu]
+  [[menu.main]]
+    name = "Home"
+    url = "/"
+    weight = 1
+  [[menu.main]]
+    name = "Research"
+    url = "/research"
+    weight = 2
+  [[menu.main]]
+    name = "Publications"
+    url = "/publications"
+    weight = 3
+  [[menu.main]]
+    name = "People"
+    url = "/people"
+    weight = 4
+  [[menu.main]]
+    name = "Teaching"
+    url = "/teaching"
+    weight = 5
+  [[menu.main]]
+    name = "Contact"
+    url = "/contact"
+    weight = 6
+
+[markup.goldmark.renderer]
+  unsafe = true

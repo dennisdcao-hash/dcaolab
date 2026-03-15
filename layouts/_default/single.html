@@ -1,0 +1,146 @@
+{{ define "main" }}
+<div class="container">
+    {{ .Content }}
+
+    {{ if eq .File.ContentBaseName "publications" }}
+    {{ $data := site.Data.publications }}
+
+    <style>
+        ol.pub-list {
+            counter-reset: none !important;
+            list-style: none;
+            padding-left: 0;
+        }
+        ol.pub-list > li {
+            display: block !important;
+            margin-bottom: 16px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid #eee;
+        }
+        ol.pub-list > li:before {
+            display: none !important;
+        }
+        .pub-number {
+            font-weight: bold;
+            margin-right: 4px;
+        }
+        .pub-row {
+            display: flex;
+            gap: 16px;
+            align-items: flex-start;
+        }
+        .pub-text {
+            flex: 1;
+            min-width: 0;
+        }
+        .pub-img {
+            flex-shrink: 0;
+            width: 180px;
+        }
+        .pub-img img {
+            width: 100% !important;
+            display: block;
+            border: 1px solid #ddd;
+            margin: 0 !important;
+        }
+        /* Abstract accordion */
+        .pub-abstract-toggle {
+            cursor: pointer;
+            font-size: 0.85em;
+            color: #666;
+            margin-top: 4px;
+            user-select: none;
+            display: inline-block;
+        }
+        .pub-abstract-toggle:hover {
+            color: #333;
+        }
+        .pub-abstract-toggle::before {
+            content: "▸ ";
+        }
+        .pub-abstract-toggle.open::before {
+            content: "▾ ";
+        }
+        .pub-abstract-content {
+            overflow: hidden;
+            height: 0;
+            transition: height 0.3s ease;
+        }
+        .pub-abstract-content p {
+            font-size: 0.85em;
+            line-height: 1.5;
+            margin: 6px 0 0 0;
+        }
+        @media (max-width: 600px) {
+            .pub-row { flex-direction: column; }
+            .pub-img { width: 140px; }
+        }
+    </style>
+
+    {{ $sections := slice "independent" "graduate" "undergrad" }}
+    {{ range $key := $sections }}
+        {{ $section := index $data $key }}
+        {{ if $section.entries }}
+
+        <h3>{{ $section.label }}</h3>
+        {{ $total := len $section.entries }}
+        <ol class="pub-list">
+        {{ range $i, $pub := $section.entries }}
+            <li>
+                <div class="pub-row">
+                    <div class="pub-text">
+                        <span class="pub-number">[{{ sub $total $i }}]</span>
+                        {{ $pub.author }}.
+                        "{{ $pub.title }}."
+                        {{ if eq $pub.type "incollection" }}
+                            In <em>{{ $pub.journal }}</em>{{ with $pub.publisher }}, {{ . }}{{ end }}{{ with $pub.pages }}, pp. {{ . }}{{ end }}, {{ $pub.year }}.
+                        {{ else }}
+                            <em>{{ $pub.journal }}</em>{{ with $pub.volume }}, <strong>{{ $pub.year }}</strong>, <em>{{ . }}</em>{{ end }}{{ with $pub.pages }}, {{ . }}{{ end }}.
+                        {{ end }}
+                        {{ with $pub.doi }}
+                            <a href="https://doi.org/{{ . }}">[DOI]</a>
+                        {{ end }}
+                    </div>
+                    {{ with $pub.image }}
+                        <div class="pub-img">
+                            <a href="{{ . }}"><img src="{{ . }}" alt="Graphical abstract"></a>
+                        </div>
+                    {{ end }}
+                </div>
+                {{ with $pub.abstract }}
+                    <div class="pub-abstract-toggle" onclick="toggleAbstract(this)">Abstract</div>
+                    <div class="pub-abstract-content">
+                        <p>{{ . }}</p>
+                    </div>
+                {{ end }}
+            </li>
+        {{ end }}
+        </ol>
+
+        {{ end }}
+    {{ end }}
+
+    <script>
+    function toggleAbstract(el) {
+        var content = el.nextElementSibling;
+        el.classList.toggle('open');
+        if (content.style.height && content.style.height !== '0px') {
+            content.style.height = content.scrollHeight + 'px';
+            requestAnimationFrame(function() {
+                content.style.height = '0px';
+            });
+        } else {
+            content.style.height = content.scrollHeight + 'px';
+            content.addEventListener('transitionend', function handler() {
+                if (content.style.height !== '0px') {
+                    content.style.height = 'auto';
+                }
+                content.removeEventListener('transitionend', handler);
+            });
+        }
+    }
+    </script>
+
+    {{ end }}
+</div>
+{{ end }}
