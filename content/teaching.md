@@ -4,12 +4,8 @@ title = "Teaching"
 
 ## Teaching
 
-### Current Courses
+### Organic Chemistry
 
-**[Course Number]: [Course Title]** — [Semester Year]
-- [Brief description or link to syllabus]
+Dennis teaches organic chemistry at Macalester College and mentors undergraduate research students in the lab.
 
-### Past Courses
-
-- **[Course Number]: [Course Title]** — [Semester Year]
-- **[Course Number]: [Course Title]** — [Semester Year]
+See also: [RealOrganicChemistry.org](https://realorganicchemistry.org) — a collection of introductory-appropriate organic chemistry reactions from the literature, described in [J. Chem. Educ. 2022](https://doi.org/10.1021/acs.jchemed.2c00424).

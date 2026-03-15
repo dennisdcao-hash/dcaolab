@@ -7,7 +7,7 @@ enableEmoji = true
 
 [params]
   author = "Dennis Cao"
-  description = "Cao Lab - Organic Chemistry"
+  description = "Cao Lab - Organic materials research at Macalester College"
   favicon = "favicon.ico"
   [params.footer]
     text = "Cao Lab"
@@ -53,9 +53,13 @@ enableEmoji = true
     url = "/teaching"
     weight = 5
   [[menu.main]]
+    name = "News"
+    url = "/news"
+    weight = 6
+  [[menu.main]]
     name = "Contact"
     url = "/contact"
-    weight = 6
+    weight = 7
 
 [markup.goldmark.renderer]
   unsafe = true

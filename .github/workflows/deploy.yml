@@ -9,6 +9,7 @@ permissions:
   contents: read
   pages: write
   id-token: write
+  issues: write
 
 concurrency:
   group: "pages"
@@ -21,6 +22,7 @@ jobs:
       - uses: actions/checkout@v4
         with:
           submodules: true
+          fetch-depth: 2
 
       - name: Setup Python
         uses: actions/setup-python@v5
@@ -30,8 +32,72 @@ jobs:
       - name: Install bibtexparser
         run: pip install bibtexparser
 
+      - name: Save old publications list
+        run: |
+          if git show HEAD~1:data/publications.json > /tmp/old_pubs.json 2>/dev/null; then
+            echo "OLD_PUBS=true" >> $GITHUB_ENV
+          else
+            echo "OLD_PUBS=false" >> $GITHUB_ENV
+          fi
+
       - name: Parse bibliography
         run: python scripts/parse_bib.py
+
+      - name: Check for new publications
+        if: env.OLD_PUBS == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python -c "
+          import json
+
+          with open('/tmp/old_pubs.json') as f:
+              old = json.load(f)
+          with open('data/publications.json') as f:
+              new = json.load(f)
+
+          old_keys = set()
+          for section in old.values():
+              for e in section.get('entries', []):
+                  old_keys.add(e['key'])
+
+          new_pubs = []
+          for section in new.values():
+              for e in section.get('entries', []):
+                  if e['key'] not in old_keys:
+                      new_pubs.append(e)
+
+          if new_pubs:
+              with open('/tmp/new_pubs.txt', 'w') as f:
+                  for p in new_pubs:
+                      f.write(f\"Title: {p['title']}\n\")
+                      f.write(f\"Authors: {p['author']}\n\")
+                      f.write(f\"Journal: {p['journal']}, {p['year']}\n\")
+                      f.write(f\"Suggested filename: content/news/{p['year']}-XX-DESCRIPTION.md\n\")
+                      f.write('\n')
+          else:
+              open('/tmp/new_pubs.txt', 'w').close()
+          "
+
+          if [ -s /tmp/new_pubs.txt ]; then
+            BODY=$(cat <<EOF
+          New publication(s) detected! Consider adding a news item.
+
+          $(cat /tmp/new_pubs.txt)
+
+          Create a \`.md\` file in \`content/news/\` with:
+          \`\`\`markdown
+          +++
+          title = "Your headline"
+          date = YYYY-MM-DD
+          +++
+
+          A sentence or two about the paper.
+          \`\`\`
+          EOF
+          )
+            gh issue create --title "📄 New publication — add a news item?" --body "$BODY"
+          fi
 
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v3

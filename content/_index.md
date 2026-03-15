@@ -6,11 +6,6 @@ title = "Home"
 
 {{< figure class="avatar" src="/avatar.jpg" alt="Dennis Cao">}}
 
-Welcome to the Cao Lab. We are an organic chemistry research group focused on
-[describe your research focus here].
+Organic materials research at a primarily undergraduate institution.
 
-### Recent News
-
-- **[Date]** — [News item, e.g., "New paper published in JACS"]
-- **[Date]** — [News item, e.g., "Welcome new graduate student X"]
-- **[Date]** — [News item, e.g., "Grant awarded from NSF"]
+We are a synthetic organic chemistry group at [Macalester College](https://www.macalester.edu/) in St. Paul, Minnesota. Our research focuses on the design and synthesis of electron-deficient organic materials, with interests spanning cationic electron acceptors, high-density redox centers, and self-assembled molecular architectures.

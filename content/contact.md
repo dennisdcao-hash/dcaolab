@@ -5,25 +5,10 @@ title = "Contact"
 ## Contact
 
 **Dennis Cao**
-[Your Title]
 Department of Chemistry
-[University Name]
-
-- Email: [CHANGEME@university.edu](mailto:CHANGEME@university.edu)
-- Office: [Building, Room Number]
-- Phone: [Phone number]
-
-### Mailing Address
-
-> Department of Chemistry
->
-> [University Name]
->
-> [Street Address]
->
-> [City, State ZIP]
+Macalester College
+St. Paul, MN
 
 ### Prospective Students
 
-If you are interested in joining the lab, please send an email with your CV and
-a brief description of your research interests.
+Macalester undergraduates interested in joining the lab should send an email with a brief description of your interests and background.

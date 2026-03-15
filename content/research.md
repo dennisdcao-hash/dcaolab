@@ -4,20 +4,14 @@ title = "Research"
 
 ## Research
 
-Our group develops [brief overview of research program].
+### Cationic Electron Acceptors
 
-### Project 1: [Title]
+We seek to achieve ambient stability of the reduced states of aromatic imides through the incorporation of cationic charge onto the aromatic core to set the stage for incorporation into device settings.
 
-[Description of research project. What questions are you asking? What approaches
-do you use? What impact does this work have?]
+### Cramming Imides Together
 
-<!-- You can add figures like this: -->
-<!-- {{< figure src="/img/project1.png" alt="Project 1" width="500px" >}} -->
+We are targeting small molecules with high densities of redox centers for their potential in charge accumulating applications. This work is funded by the ACS PRF.
 
-### Project 2: [Title]
+### Self-Assembled Structures
 
-[Description of another research project.]
-
-### Project 3: [Title]
-
-[Description of another research project.]
+We are interested in new synthetic strategies for building molecular 2D and 3D structures with porous properties.

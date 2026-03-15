@@ -1,0 +1,13 @@
+{{ define "main" }}
+<div class="container">
+    {{ .Content }}
+
+    {{ range .Pages.ByDate.Reverse }}
+    <div style="margin-bottom: 12px;">
+        <strong>{{ .Date.Format "January 2, 2006" }}</strong> — {{ .Title }}
+        <br>
+        <span style="font-size: 0.9em;">{{ .Content }}</span>
+    </div>
+    {{ end }}
+</div>
+{{ end }}
