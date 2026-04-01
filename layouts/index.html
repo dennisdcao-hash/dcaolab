@@ -7,8 +7,8 @@
     {{ if $news }}
     <h3>Recent News</h3>
     {{ range first 5 $news }}
-    <div style="margin-bottom: 8px;">
-        <strong>{{ .Date.Format "January 2006" }}</strong> — {{ .Title }}: {{ .Plain | truncate 200 }}
+    <div style="margin-bottom: 16px;">
+        <strong>{{ .Date.Format "January 2006" }}</strong> — <strong>{{ .Title }}</strong>: {{ .Plain }}
     </div>
     {{ end }}
     {{ if gt (len $news) 5 }}

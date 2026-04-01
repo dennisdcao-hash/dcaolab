@@ -3,8 +3,8 @@
     {{ .Content }}
 
     {{ range .Pages.ByDate.Reverse }}
-    <div style="margin-bottom: 12px;">
-        <strong>{{ .Date.Format "January 2, 2006" }}</strong> — {{ .Title }}
+    <div style="margin-bottom: 20px;">
+        <strong>{{ .Date.Format "January 2006" }}</strong> — <strong>{{ .Title }}</strong>
         <br>
         <span style="font-size: 0.9em;">{{ .Content }}</span>
     </div>

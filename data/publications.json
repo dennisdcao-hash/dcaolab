@@ -3,9 +3,24 @@
     "label": "Independent Career",
     "entries": [
       {
+        "key": "amundson_pyromellitic_2026",
+        "title": "Pyromellitic dihydrazides as hydrolytically stable analogs of pyromellitic diimide",
+        "author": "<strong>J. M. Amundson</strong>, <strong>R. B. Brush</strong>, <strong>K. M. Jensen</strong>, <strong>B. R. Funk</strong>, <strong>H. Jung</strong>, <strong>S. K. Mamicha</strong>, V. G. Young, E. Garcia L., L. M. Klivansky, D. D. Cao",
+        "journal": "Org. Biomol. Chem.",
+        "year": "2026",
+        "volume": "24",
+        "pages": "2650–2654",
+        "doi": "10.1039/D6OB00281A",
+        "type": "article",
+        "publisher": "",
+        "abstract": "Pyromellitic dihydrazide is a significant upgrade to pyromellitic diimides, combining ease-of-synthesis, extreme alkaline stability, and thermal and structural features together into a new scaffold that is attractive for robust materials.\n, \nThe utility of aromatic diimides in materials can be compromised by their instability toward nucleophiles such as water. Here, we present pyromellitic dihydrazides (PMDHs) as a robust alternative that retains the favorable optoelectronic and thermal properties of the parent imides while eliminating their hydrolytic weakness. These solution-processible compounds feature reversible electrochemistry and withstand high temperatures, yet remain chemically inert under harsh alkaline conditions that degrade standard cyclic imides. These findings introduce the cyclic hydrazide motif as a versatile, superior building block of potential interest to researchers engineering robust functional materials.",
+        "image": "",
+        "source_file": "hydrazides.bib"
+      },
+      {
         "key": "bassSynthesisCharacterization1234naphthalene2024",
         "title": "Synthesis and characterization of 1,2,3,4-naphthalene and anthracene diimides",
-        "author": "A. D. Bass, D. Castellanos, X. A. Calicdan, D. D. Cao",
+        "author": "<strong>A. D. Bass</strong>, <strong>D. Castellanos</strong>, <strong>X. A. Calicdan</strong>, D. D. Cao",
         "journal": "Beilstein J. Org. Chem.",
         "year": "2024",
         "volume": "20",
@@ -20,7 +35,7 @@
       {
         "key": "leake_gebresilassie_bisphosphonium_2024",
         "title": "Bisphosphonium Benzene Diimides",
-        "author": "F. Leake Gebresilassie, M. Ji Kim, D. Castellanos, C. H. Broderick, S. M. Ngo, V. G. Young Jr., D. D. Cao",
+        "author": "<strong>F. Leake Gebresilassie</strong>, <strong>M. Ji Kim</strong>, <strong>D. Castellanos</strong>, <strong>C. H. Broderick</strong>, <strong>S. M. Ngo</strong>, V. G. Young Jr., D. D. Cao",
         "journal": "Chemistry – A European Journal",
         "year": "2024",
         "volume": "30",
@@ -65,7 +80,7 @@
       {
         "key": "hippchenSecondGenerationCataAnnulated2023",
         "title": "Second Generation of Cata-Annulated Azaacene Bisimides: Towards Electron-Accepting Materials",
-        "author": "N. Hippchen, E. Heinzel, C. K. Zhang, P. Jäger, M. Elter, P. Ludwig, F. Rominger, J. Freudenberg, D. D. Cao, U. H. F. Bunz",
+        "author": "N. Hippchen, E. Heinzel, <strong>C. K. Zhang</strong>, P. Jäger, M. Elter, P. Ludwig, F. Rominger, J. Freudenberg, D. D. Cao, U. H. F. Bunz",
         "journal": "ChemPlusChem",
         "year": "2023",
         "volume": "88",
@@ -80,7 +95,7 @@
       {
         "key": "zouImprovedSynthesesHalogenated2022",
         "title": "Improved Syntheses of Halogenated Benzene-1,2,3,4-Tetracarboxylic Diimides",
-        "author": "B. Zou, K. A. Stellmach, S. M. Luo, F. L. Gebresilassie, H. Jung, C. K. Zhang, A. D. Bass, D. E. Janzen, D. D. Cao",
+        "author": "<strong>B. Zou</strong>, <strong>K. A. Stellmach</strong>, <strong>S. M. Luo</strong>, <strong>F. L. Gebresilassie</strong>, <strong>H. Jung</strong>, <strong>C. K. Zhang</strong>, <strong>A. D. Bass</strong>, D. E. Janzen, D. D. Cao",
         "journal": "J. Org. Chem.",
         "year": "2022",
         "volume": "87",
@@ -110,7 +125,7 @@
       {
         "key": "elterCataAnnulatedAzaacene2021",
         "title": "Cata ‐Annulated Azaacene Bisimides",
-        "author": "M. Elter, L. Ahrens, S. M. Luo, F. Rominger, J. Freudenberg, D. D. Cao, U. H. F. Bunz",
+        "author": "M. Elter, L. Ahrens, <strong>S. M. Luo</strong>, F. Rominger, J. Freudenberg, D. D. Cao, U. H. F. Bunz",
         "journal": "Chem. Eur. J.",
         "year": "2021",
         "volume": "27",
@@ -125,7 +140,7 @@
       {
         "key": "kimHighlyStabilizedPhosphonium2019a",
         "title": "A Highly Stabilized Phosphonium Ylide that Forms Supramolecular Dimers in Solution and the Solid State",
-        "author": "M. J. Kim, S. M. Luo, A. J. Greenlee, V. G. Young, D. D. Cao",
+        "author": "<strong>M. J. Kim</strong>, <strong>S. M. Luo</strong>, <strong>A. J. Greenlee</strong>, V. G. Young, D. D. Cao",
         "journal": "Chemistry – A European Journal",
         "year": "2019",
         "volume": "25",
@@ -140,7 +155,7 @@
       {
         "key": "luoRedoxActiveHeteroaceneChromophores2019a",
         "title": "Redox-Active Heteroacene Chromophores Derived from a Nonlinear Aromatic Diimide",
-        "author": "S. M. Luo, K. A. Stellmach, S. M. Ikuzwe, D. D. Cao",
+        "author": "<strong>S. M. Luo</strong>, <strong>K. A. Stellmach</strong>, <strong>S. M. Ikuzwe</strong>, D. D. Cao",
         "journal": "J. Org. Chem.",
         "year": "2019",
         "volume": "84",
@@ -155,7 +170,7 @@
       {
         "key": "greenlee_pyridinium-functionalized_2018",
         "title": "Pyridinium-Functionalized Pyromellitic Diimides with Stabilized Radical Anion States",
-        "author": "A. J. Greenlee, C. K. Ofosu, Q. Xiao, M. M. Modan, D. E. Janzen, D. D. Cao",
+        "author": "<strong>A. J. Greenlee</strong>, <strong>C. K. Ofosu</strong>, <strong>Q. Xiao</strong>, <strong>M. M. Modan</strong>, D. E. Janzen, D. D. Cao",
         "journal": "ACS Omega",
         "year": "2018",
         "volume": "3",
@@ -170,7 +185,7 @@
       {
         "key": "kahn_nuptial_2018",
         "title": "Nuptial gift chemistry reveals convergent evolution correlated with antagonism in mating systems of harvestmen (Arachnida, Opiliones)",
-        "author": "P. C. Kahn, D. D. Cao, M. Burns, S. L. Boyer",
+        "author": "<strong>P. C. Kahn</strong>, D. D. Cao, M. Burns, S. L. Boyer",
         "journal": "Ecology and Evolution",
         "year": "2018",
         "volume": "8",
@@ -325,7 +340,7 @@
       {
         "key": "jiaInterfaceEngineeredBistableRotaxaneGraphene2013",
         "title": "Interface-Engineered Bistable [2]Rotaxane-Graphene Hybrids with Logic Capabilities",
-        "author": "C. Jia, H. Li, J. Jiang, J. Wang, H. Chen, D. Cao, J. F. Stoddart, X. Guo",
+        "author": "C. Jia, H. Li, J. Jiang, J. Wang, H. Chen, D. Cao, J. F. Stoddart, <strong>X. Guo</strong>",
         "journal": "Adv. Mater.",
         "year": "2013",
         "volume": "25",
@@ -600,7 +615,7 @@
       {
         "key": "koshkakaryanMultilayeredNanofibersStacks2010",
         "title": "Multilayered nanofibers from stacks of single-molecular thick nanosheets of hexakis(alkoxy)triphenylenes",
-        "author": "G. Koshkakaryan, P. Jiang, V. Altoe, D. Cao, L. M. Klivansky, Y. Zhang, S. Chung, A. Katan, F. Martin, M. Salmeron, B. Ma, S. Aloni, Y. Liu",
+        "author": "G. Koshkakaryan, P. Jiang, V. Altoe, D. Cao, L. M. Klivansky, <strong>Y. Zhang</strong>, S. Chung, A. Katan, F. Martin, M. Salmeron, B. Ma, S. Aloni, Y. Liu",
         "journal": "Chem. Commun.",
         "year": "2010",
         "volume": "46",

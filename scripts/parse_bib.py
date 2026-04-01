@@ -34,9 +34,24 @@ CATEGORIES = [
     {"key": "undergrad", "label": "Undergraduate Work"},
 ]
 
+# Lab member last names for bolding in author lists.
+# Includes PI and all undergraduate mentees from CV.
+LAB_MEMBER_LAST_NAMES = {
+    # Current and alumni
+    "Northrop", "Sung", "Lai", "Hoisington", "Korde", "Justman", "Weiss",
+    "Galvin", "Fena", "Hackerman", "Brush", "Jensen", "Monkam",
+    "Anderson-LeFort", "Anderson-Lefort", "Funk", "Mamicha", "Calicdan",
+    "Jung", "Castellanos", "Dodge", "Amundson", "Gebresilassie",
+    "Leake Gebresilassie", "Ji Kim", "Zhang", "Guo", "Bass", "Monterroso", "Zou",
+    "Broderick", "Kim", "Ngo", "West", "Luo", "Stellmach", "Nguyen",
+    "Ikuzwe", "Lechuga", "Tulu", "Ahmed", "Xiao", "Modan", "Ofosu",
+    "Romo", "Schaller", "Kahn", "Greenlee", "Lee",
+}
+
 
 def clean_author(author_str):
-    """Convert 'Last, First and Last, First' to 'F. Last, F. Last' format."""
+    """Convert 'Last, First and Last, First' to 'F. Last, F. Last' format.
+    Bold lab members by wrapping in <strong> tags."""
     authors = author_str.split(" and ")
     formatted = []
     for author in authors:
@@ -46,7 +61,11 @@ def clean_author(author_str):
             last = parts[0]
             firsts = parts[1].split()
             initials = ". ".join(f[0] for f in firsts if f) + "."
-            formatted.append(f"{initials} {last}")
+            name = f"{initials} {last}"
+            # Check if this author is a lab member (match last name)
+            if last in LAB_MEMBER_LAST_NAMES:
+                name = f"<strong>{name}</strong>"
+            formatted.append(name)
         else:
             formatted.append(author)
     return ", ".join(formatted)
